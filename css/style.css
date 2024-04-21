@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+  font-family: "Open Sans", sans-serif;
+}
+
+h1{
+  color:#002838;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -0.012em;
+}
+h1 span{
+  font-weight: 400;
+}
+
+.recent-time-log {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+}
+
+.recent-time-log form {
+  margin: 0;
+}
+
+.logout-section {
+  text-align: right;
+}
+
+.top-nav {
+  padding: 20px 0;
+  border-bottom: 1px #cfdde9 solid;
+  background: #fff;
+}
+
+.top-nav p {
+  margin: 0;
+}
+
+.bottom-nav {
+  padding: 15px 0;
+  border-bottom: 1px solid #cfdde9;
+  background: #fff;
+}
+
+.bottom-nav h1 {
+  margin: 0;
+}
+
+body {
+  background: #f4f7fa;
+}
+
+.user-main-dashboard {
+  padding-top: 30px;
+}
+
+.starter-btn {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+.success {
+  background: #3d8854;
+  padding: 8px 0;
+  color: #fff;
+}
+.error {
+  background: red;
+  padding: 8px 0;
+  color: #fff;
+}
+.dailylog-btn {
+  display: flex;
+  justify-content: end;
+}
+
+.dailylog-btn form {
+  margin: 0;
+  padding: 0;
+}
+
+.dailylog-btn form input {
+  padding: 7px 23px;
+  background: #3d8854;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+.bottom-wrapper {
+  align-items: center;
+}
+
+.box-class {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #cfdde9;
+}
+
+.box-class h3 {
+  font-size: 0.875rem;
+  color: #002838;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+p.sub-text {
+  color: #264856;
+  font-size: 0.775rem;
+  margin: 0;
+  line-height: 20px;
+}
+
+.box-class .total-hour {
+  font-size: 32px;
+  font-weight: 800;
+  display: inline-block;
+  line-height: 24px;
+  margin-bottom: 6px;
+}
+
+.box-class .deatail {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline;
+}
+
+
+.admin-dashboard .wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.admin-dashboard .wrapper .nav-menu {
+  flex: 0 0 20%;
+  height: 100%;
+}
+
+.admin-dashboard .wrapper .main-body {
+  flex: 0 0 80%;
+  width: 100%;
+}
+
+.admin-dashboard .wrapper .nav-menu .menu-listing .list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-dashboard .wrapper .nav-menu .menu-wrap {
+  /* padding: 30px; */
+  height: 100%;
+  background: #fff;
+}
+
+.admin-dashboard .wrapper .nav-menu .menu-listing .list li a {
+  text-decoration: none;
+  color: #101010;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-dashboard .wrapper .nav-menu .menu-listing .list li a {
+  padding: 15px 25px 15px 60px;
+}
+
+.admin-dashboard .main-body .wrapper {
+  display: block;
+  padding: 50px 25px;
+}
+
+.admin-dashboard .main-body .wrapper .leave-section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #cfdde9;
+}
+
+.admin-dashboard .main-body .wrapper .leave-section h3 {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.request-list {
+  border: 1px solid #cfdde9;
+  border-radius: 10px;
+}
+
+.request-list ul {
+  padding: 0;
+  margin: 0;
+}
+
+.request-list ul li {
+  list-style: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.request-list li a {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  align-items: center;
+}
+
+.request-list .right {
+  display: flex;
+  flex-direction: column;
+}
+
+.request-list li a span.name {
+  color: #264856;
+}
+
+li.approved {
+  background: #a0ebee;
+}
+
+span.des {
+  color: #264856;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+span.date {
+  color: #264856;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: right;
+}
+
+
+#labels-example-2 {
+height: 300px;
+max-width: 800px;
+margin: 0 auto;
+padding-bottom: 30px;
+}
+
+.engagement-graph {
+  padding: 20px 0;
+}
+
+.graph-wrap tr {
+  max-width: 50px !important;
+  text-align: center;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.graph-wrap tr td {
+  border-radius: 5px 5px 0 0;
+  max-width: 40px;
+  background: #9FEAEE !important;
+}
+
+.graph-wrap tbody {
+  position: relative;
+  justify-content: start !important;
+}
+
+.graph-wrap tbody:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border: 1px dashed #9db7d1;
+  content: '';
+  top: 50%;
+}
+
+.graph-wrap tbody:after {
+  position: absolute;
+  content: 'Daily threshold';
+  font-size: 0.775rem;
+  color: #264856;
+  font-family: sans-serif;
+  right: 0;
+  top: 43%;
+}
+
+.graph-wrap td {
+  position: relative !important;
+}
+
+.graph-wrap td span.data {
+  position: absolute !important;
+  top: -16px !important;
+  font-size: 0.775rem;
+  color: #264856;
+}
+.graph-wrap tr th {
+  font-size: 0.875rem;
+  color: #264856;
+}
+
+
+.user-list-wrap table {
+  width: 100%;
+  display: table;
+  border-radius: 8px;
+}
+
+.manage-employee .user-list-wrap.box-class {max-width: 1050px;margin: 0 auto;}
+
+.user-list-wrap table thead th, .user-list-wrap table tbody td {
+  height: 48px;
+  max-height: 48px;
+  font-weight: 700;
+  padding: 0 16px;
+}
+
+.user-list-wrap table tbody td {
+  font-weight: 300;
+  border-top: 1px solid #CFDDE9;
+}
+
+.verification {
+  background: #022838;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.verification .form-wrap {
+  background: #fff;
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid #CFDDE9;
+  box-shadow: 0 2px 0 hsla(0,0%,69%,.12);
+  border-radius: 3px;
+  font-size: 14px;
+ 
+}
+
+
+.verification-form h1 {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 20px 0;
+}
+
+.verification-form .form-box span {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.verification-form .form-box {
+  padding-bottom: 20px;
+}
+
+.verification-form {
+  padding: 30px;
+}
+
+.verification-form .form-box input {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  font-weight: 300;
+}
+
+body .verification-form .form-box input[type="submit"] {
+  background: #7E5CEF !important;
+  border: 0;
+  color: #fff;
+  height: 50px;
+}
+
+.dropdown-toggle::after {
+  content: '';
+  font-size: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv' focusable='false' aria-hidden='true' viewBox='0 0 24 24' aria-label='chevron-down-icon' data-testid='chevron-down-icon'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071Z'%3E%3C/path%3E%3C/svg%3E");
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.admin-dashboard .wrapper .nav-menu .menu-listing .list li a:hover {
+  background: #f9fafa;
+}
+
+.admin-dashboard .wrapper .nav-menu .menu-listing .list li {
+  margin-bottom: 5px;
+}
+
+.menu-listing li a.employee-icon:before {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv' focusable='false' aria-hidden='true' viewBox='0 0 24 24' aria-label='users-icon' data-testid='users-icon' height='24px' width='24px'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 8C3 5.23858 5.23858 3 8 3C8.43009 3 8.84889 3.05453 9.24926 3.15758C9.78411 3.29524 10.1061 3.84042 9.96844 4.37528C9.83078 4.91013 9.28559 5.23212 8.75074 5.09445C8.51187 5.03297 8.26051 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11C8.55228 11 9 11.4477 9 12C9 12.5523 8.55228 13 8 13C6.59095 13 5.3793 13.6009 4.49519 14.7386C3.72938 15.7241 3.18302 17.1519 3.03818 19H6C6.55228 19 7 19.4477 7 20C7 20.5523 6.55228 21 6 21H2C1.44772 21 1 20.5523 1 20C1 17.3393 1.67762 15.1049 2.91598 13.5114C3.45369 12.8194 4.09003 12.2589 4.80276 11.8443C3.70117 10.9272 3 9.54547 3 8ZM16 5C14.3431 5 13 6.34315 13 8C13 9.65685 14.3431 11 16 11C17.6569 11 19 9.65685 19 8C19 6.34315 17.6569 5 16 5ZM19.1972 11.8443C20.2988 10.9272 21 9.54547 21 8C21 5.23858 18.7614 3 16 3C13.2386 3 11 5.23858 11 8C11 9.54547 11.7012 10.9272 12.8028 11.8443C12.09 12.2589 11.4537 12.8194 10.916 13.5114C9.67762 15.1049 9 17.3393 9 20C9 20.5523 9.44772 21 10 21H22C22.5523 21 23 20.5523 23 20C23 17.3393 22.3224 15.1049 21.084 13.5114C20.5463 12.8194 19.91 12.2589 19.1972 11.8443ZM16 13C14.591 13 13.3793 13.6009 12.4952 14.7386C11.7294 15.7241 11.183 17.1519 11.0382 19H20.9618C20.817 17.1519 20.2706 15.7241 19.5048 14.7386C18.6207 13.6009 17.409 13 16 13Z'%3E%3C/path%3E%3C/svg%3E");
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 25px;
+}
+
+.menu-listing li a.dashboard-icon:before {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv' focusable='false' aria-hidden='true' viewBox='0 0 24 24' aria-label='dashboard-icon' data-testid='dashboard-icon' height='24px' width='24px'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5973 7.53987C11.4401 7.00875 12 6.06976 12 5C12 3.34315 10.6569 2 9 2C7.34315 2 6 3.34315 6 5C6 5.8719 6.37195 6.65692 6.96584 7.20506L4.19841 12.0065C4.13282 12.0022 4.06667 12 4 12C2.34315 12 1 13.3431 1 15C1 16.6569 2.34315 18 4 18C5.65685 18 7 16.6569 7 15C7 14.1339 6.633 13.3536 6.04603 12.806L8.68942 8.21975L13.2549 16.5595C12.4951 17.1038 12 17.9941 12 19C12 20.6569 13.3431 22 15 22C16.6569 22 18 20.6569 18 19C18 18.1339 17.633 17.3536 17.046 16.8059L19.8192 11.9946C19.879 11.9982 19.9393 12 20 12C21.6569 12 23 10.6569 23 9C23 7.34315 21.6569 6 20 6C18.3431 6 17 7.34315 17 9C17 9.8719 17.3719 10.6569 17.9658 11.2051L15.2158 15.9763L10.5973 7.53987ZM10 5C10 5.55228 9.55228 6 9 6C8.44772 6 8 5.55228 8 5C8 4.44772 8.44772 4 9 4C9.55228 4 10 4.44772 10 5ZM4 16C4.55228 16 5 15.5523 5 15C5 14.4477 4.55228 14 4 14C3.44772 14 3 14.4477 3 15C3 15.5523 3.44772 16 4 16ZM15 20C15.5523 20 16 19.5523 16 19C16 18.4477 15.5523 18 15 18C14.4477 18 14 18.4477 14 19C14 19.5523 14.4477 20 15 20ZM20 10C20.5523 10 21 9.55228 21 9C21 8.44772 20.5523 8 20 8C19.4477 8 19 8.44772 19 9C19 9.55228 19.4477 10 20 10Z'%3E%3C/path%3E%3C/svg%3E");  width: 30px;
+  height: 25px;
+  width: 25px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 25px;
+}
+
+
+.admin-dashboard .wrapper .nav-menu .menu-listing .list li.dropdown ul.dropdown-menu {
+  position: initial !important;
+  transform: none !important;
+  border: 0;
+  padding: 0;
+}
+
+.admin-dashboard .wrapper .nav-menu .menu-listing .list li.dropdown ul.dropdown-menu li.dropdown-item a {
+  font-size: 15px;
+}
+
+.admin-dashboard .wrapper .nav-menu .menu-listing .list li a.show::after {
+  rotate: 180deg;
+}
+
+.top-emp-sec {
+  width: 100%;
+  display: flex;
+  background: #fff;
+  margin-bottom: 50px;
+  padding: 30px 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #cfdde9;
+  align-items: center;
+}
+
+.manage-employee {
+  width: 100%;
+}
+
+.top-emp-sec .employee-list {
+  margin: 70px 0;
+}
+
+.top-emp-sec a.btn-primary.add-emp {
+  background: #0076dc;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 24px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  gap: 15px;
+}
+.top-emp-sec a.btn-primary.add-emp:before {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv' focusable='false' aria-hidden='true' viewBox='0 0 24 24' aria-label='plus-circle-icon' data-testid='plus-circle-icon' height='24px' width='24px'%3E%3Cpath d='M12 7C12.5523 7 13 7.44772 13 8V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11H11V8C11 7.44772 11.4477 7 12 7Z'%3E%3C/path%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3Z'%3E%3C/path%3E%3C/svg%3E");
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
