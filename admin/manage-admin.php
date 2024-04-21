@@ -1,7 +1,5 @@
 <?php include('../user/header.php'); ?>
 
-
-        <!-- Main Content Section Starts -->
         <div class="main-content admin-dashboard">
             <div class="wrapper">
                 <?php include('sidebar.php'); ?>
