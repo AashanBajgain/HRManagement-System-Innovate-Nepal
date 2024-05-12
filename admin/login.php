@@ -1,5 +1,4 @@
 <?php include('../config/constants.php'); ?>
-//demo commit
 <html>
     <head>
         <title>Login - Food Order System</title>
