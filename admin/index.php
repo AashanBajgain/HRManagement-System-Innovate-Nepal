@@ -47,7 +47,6 @@
                                 <div class="request-list">
                                     <ul>
                                         <?php 
-                                        //Display Foods that are Active
                                         $leavesql = "SELECT * FROM tbl_leave";
                                         //Execute the Query
                                         $leaveres=mysqli_query($conn, $leavesql);
@@ -56,7 +55,6 @@
                                         //CHeck whether the foods are availalable or not
                                         if($count>0)
                                         {
-                                            //Foods Available
                                             while($row=mysqli_fetch_assoc($leaveres))
                                             {
                                                 //Get the Values
