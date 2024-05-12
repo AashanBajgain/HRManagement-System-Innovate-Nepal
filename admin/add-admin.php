@@ -5,6 +5,7 @@
         unset($_SESSION['addadmin']); //Remove Session Message
     }
 ?>
+// Changes Demo
 <div class="main-content admin-dashboard">
     <div class="wrapper">
         <?php include('sidebar.php'); ?>
