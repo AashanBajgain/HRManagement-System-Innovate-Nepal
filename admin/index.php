@@ -8,31 +8,72 @@
                     <div class="col-lg-12 pb-3">
                         <div class="admin-dashboard">
                             <div class="graph-title">
-                                <h3>Users activity list</h3>
+                                <h3>Users Attendence</h3>
                             </div>
-                            <div class="user-list-wrap box-class">
-                                <table>
+                            <div class="user-list-wrap box-class table-responsive">
+                                <?php
+                                    // Get distinct user IDs from tbl_dailylog
+                                    $sql_uid = "SELECT DISTINCT uid FROM tbl_dailylog";
+                                    $result_uid = mysqli_query($conn, $sql_uid);
+                                    // Array to store data for each user
+                                    $data = array();
+                                    // Iterate over the user IDs
+                                    while ($row_uid = mysqli_fetch_assoc($result_uid)) {
+                                        $user_id = $row_uid['uid'];
+                                        // Get the user's full name from tbl_admin
+                                        $sql_full_name = "SELECT full_name FROM tbl_admin WHERE id = $user_id";
+                                        $result_full_name = mysqli_query($conn, $sql_full_name);
+                                        $row_full_name = mysqli_fetch_assoc($result_full_name);
+                                        $full_name = $row_full_name['full_name'];
+                                        
+                                        // Get today's date
+                                        $today = new DateTime();
+                                        $last_30_days_date_array = array();
+                                        // Loop to generate dates for the last 30 days
+                                        for ($i = 1; $i <= 30; $i++) {
+                                            // Clone today's date and subtract $i days to get the date for the past
+                                            $date = clone $today;
+                                            $date->modify("-$i day");
+                                            // Format the date
+                                            $last_30_days_date = $date->format('Y-m-d');
+                                            $last_30_days_date_array[] = $date->format('j M');
+
+                                            // Execute the SQL query for the current date and user ID
+                                            $sql = "SELECT COUNT(*) AS count_records
+                                                    FROM tbl_dailylog
+                                                    WHERE uid = $user_id
+                                                    AND date = '$last_30_days_date'
+                                                    GROUP BY uid"; // Group by uid
+                                            $result = mysqli_query($conn, $sql);
+
+                                            // Fetch the count
+                                            $row1 = mysqli_fetch_assoc($result);
+                                            $count1 = isset($row1['count_records']) ? $row1['count_records'] : 0;
+
+                                            // Add the count to the data array
+                                            $data[$user_id]['full_name'] = $full_name;
+                                            $data[$user_id]['counts'][] = $count1;
+                                        }
+                                    }
+                                ?>
+                                <table class="graph">
                                     <thead>
                                         <tr>
-                                            <th>SN</th>
-                                            <th>Name</th>
-                                            <th>Role</th>
-                                            <th>Total work hour</th>
-                                            <th>Total earning</th>
+                                            <th></th>
+                                            <?php foreach($last_30_days_date_array as $eachdate){?>
+                                            <th><?php echo $eachdate;?></th>
+                                            <?php } ?>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                            $userlistq = "SELECT tbl_admin.full_name, tbl_employeetype.title, SUM(tbl_dailylog.totaltime) AS sum_totaltime, SUM(tbl_dailylog.todayearning) AS sum_todayearning FROM tbl_dailylog JOIN tbl_admin ON tbl_dailylog.uid = tbl_admin.id JOIN tbl_employeetype ON tbl_admin.employeetype = tbl_employeetype.id GROUP BY tbl_admin.full_name, tbl_employeetype.title";
-                                            $resuserlist = mysqli_query($conn, $userlistq);
-                                            $i=0; while($row=mysqli_fetch_assoc($resuserlist)){ $i++;
+                                        <?php 
+                                        foreach ($data as $user_id => $counts) { 
                                         ?>
                                         <tr>
-                                            <td><?php echo $i; ?></td>
-                                            <td><span><?php echo $row['full_name'];?></span></td>
-                                            <td><span><?php echo $row['title'];?></span></td>
-                                            <td><span><?php echo $row['sum_totaltime'];?></span></td>
-                                            <td><span>$<?php echo $row['sum_todayearning'];?></span></td>
+                                            <td><?php echo $counts['full_name']; ?></td>
+                                            <?php foreach ($counts['counts'] as $count) { ?>
+                                            <td><?php echo "<div class='bar " . ($count == 1 ? 'presence-1' : '') . "'></div>"; ?></td>
+                                            <?php } ?>
                                         </tr>
                                         <?php } ?>
                                     </tbody>
@@ -112,4 +153,8 @@
         </div>
     </div>
 </div>
+
+<style>
+        
+</style>
 
